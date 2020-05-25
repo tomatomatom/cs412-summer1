@@ -1,0 +1,109 @@
+$ level intro1
+$ hint
+Just type in 'git commit' twice to finish!
+$ delay 2000
+$ show goal
+$ git commit
+$ git commit
+$ level intro2
+$ hint
+Make a new branch with "git branch " and check it out with "git checkout "
+$ delay 2000
+$ show goal
+$ git checkout -b bugFix
+$ export tree
+$ level intro3
+$ hint
+Remember to commit in the order specified (bugFix before master)
+$ delay 2000
+$ show goal
+$ git checkout master
+$ objective
+$ git commit
+$ git merge bugFix
+$ level intro4
+$ hint
+Make sure you commit from bugFix first
+$ delay 2000
+$ show goal
+$ git checkout -b bugFix
+$ git commit
+$ git checkout C1
+$ git commit
+Warning!! Detached HEAD state
+$ git checkout -b bugFix
+That branch name "bugFix" is not allowed!
+$ reset
+$ git checkout -b bugFix
+$ git commit
+$ objective
+$ checkout master
+The command "checkout master" isn't supported, sorry!
+$ git checkout master
+$ git commit
+$ objective
+$ git checkout bugFix
+$ objective
+$ git rebase master
+$ level rampup1
+$ hint
+Use the label (hash) on the commit for help!
+$ delay 2000
+$ show goal
+$ git checkout C3
+$ git checkout C1
+$ git checkout C0
+$ objective
+$ git commit
+Warning!! Detached HEAD state
+$ reset
+$ git checkout master
+$ git commit
+$ objective
+$ reset
+$ git checkout C4
+$ level rampup2
+$ hint
+Remember the Caret (^) operator!
+$ delay 2000
+$ show goal
+$ git checkout C3
+$ level rampup3
+$ hint
+You'll need to use at least one direct reference (hash) to complete this level
+$ delay 2000
+$ show goal
+$ git branch -f bugFix HEAD~2
+$ git checkout C6
+$ git branch -f master HEAD
+$ git checkout C1
+$ level rampup4
+$ hint
+Notice that revert and reset take different arguments.
+$ delay 2000
+$ show goal
+$ git revert
+I expect at least 1 argument(s) for with git revert
+$ git checkout C1
+$ git branch -f local HEAD
+$ checkout pushed
+The command "checkout pushed" isn't supported, sorry!
+$ git checkout pushed
+$ git revert pushed
+$ level move1
+$ hint
+git cherry-pick followed by commit names!
+$ delay 2000
+$ show goal
+$ git checkout C1
+$ git cherry-pick C3 C4 C7
+$ git branch -f master HEAD
+$ level move2
+$ hint
+you can use either branches or relative refs (HEAD~) to specify the rebase target
+$ delay 2000
+$ show goal
+$ git rebase -i HEAD~5
+Nothing to do...
+$ git rebase -i HEAD~4
+
