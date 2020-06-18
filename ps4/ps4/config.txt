@@ -1,0 +1,10 @@
+OpenWeatherMap API
+
+API Call: api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+API_KEY: 7f831985da3373e77a9a7b36a962ae43
+
+In node_modules:
+node-fetch
+async
+ejs
+dotenv
